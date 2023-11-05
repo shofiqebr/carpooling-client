@@ -21,8 +21,9 @@ import Register from "../pages/Register";
         },
         {
           path: 'register',
-          element: <Register></Register>,
-        },
+          element: <Register></Register>
+        }
+       
       ],
     },
   ]);
