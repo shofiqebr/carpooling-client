@@ -26,15 +26,15 @@ const Register = () => {
       return;
      }
 
-     if (!/[A-Z]/.test(password)) {
-      toast.error('Password must contain at least one capital letter.');
-      return;
-    }
+    //  if (!/[A-Z]/.test(password)) {
+    //   toast.error('Password must contain at least one capital letter.');
+    //   return;
+    // }
 
-    if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)) {
-      toast.error('Password must contain at least one special character.');
-      return;
-    }
+    // if (!/[!@#$%^&*()_+{}[\]:;<>,.?~\\/-]/.test(password)) {
+    //   toast.error('Password must contain at least one special character.');
+    //   return;
+    // }
     createUser(email,password)
     .then(res => {
       handleUpdateProfile(name, img)
