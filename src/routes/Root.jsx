@@ -14,3 +14,8 @@ const Root = () => {
 };
 
 export default Root;
+
+
+// #8e44ad
+
+// #A563C1

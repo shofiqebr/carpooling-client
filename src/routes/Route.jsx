@@ -10,11 +10,13 @@ import Dashboard from "../pages/Dashboard";
 import AddServices from "../pages/AddServices";
 import MyServices from "../pages/MyServices";
 import MyShedules from "../pages/MyShedules";
+import NotFound from "../pages/NotFound";
 
   const Route = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <NotFound/>,
       children:[
         {
           path:'/',

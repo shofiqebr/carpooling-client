@@ -14,7 +14,7 @@ const Login = () => {
 const {signIn} = useContext(AuthContext)
 const location = useLocation();
 const navigate = useNavigate();
-console.log('location in the login page', location)
+// console.log('location in the login page', location)
 
 const handleSubmit = event =>{
   event.preventDefault();

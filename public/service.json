@@ -1,0 +1,91 @@
+[
+    {
+      "serviceId": 1,
+      "serviceImage": "https://i.ibb.co/k0t9RCT/carpooling-benefits.jpghttps://i.ibb.co/d4YdxF5/download.jpg",
+      "serviceName": "Express Carpool",
+      "serviceDescription": "Share rides with others and save on commuting costs. Find rides quickly and conveniently.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider1.jpg",
+      "serviceProviderName": "RideShare Inc.",
+      "servicePrice": "$10 per ride",
+      "serviceArea": "Citywide"
+    },
+    {
+      "serviceId": 2,
+      "serviceImage": "https://i.ibb.co/cchMjn4/download-1.jpg",
+      "serviceName": "City Shuttle",
+      "serviceDescription": "Reliable city shuttle service for daily commuters. Comfortable rides with flexible schedules.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider2.jpg",
+      "serviceProviderName": "CityTransit Co.",
+      "servicePrice": "$8 per ride",
+      "serviceArea": "Citywide"
+    },
+    {
+      "serviceId": 3,
+      "serviceImage": "https://i.ibb.co/zNY7Pbq/download-2.jpg",
+      "serviceName": "Carpool Connect",
+      "serviceDescription": "Connect with nearby carpoolers. Reduce traffic and share the road for a greener commute.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider3.jpg",
+      "serviceProviderName": "EcoRide Ltd.",
+      "servicePrice": "$12 per ride",
+      "serviceArea": "Metropolitan Area"
+    },
+    {
+      "serviceId": 4,
+      "serviceImage": "https://i.ibb.co/Qn4fhbn/car-sharing-service-concept-vector-28181622.jpg",
+      "serviceName": "RideShare Pro",
+      "serviceDescription": "Professional ride-sharing service with experienced drivers and comfortable vehicles.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider4.jpg",
+      "serviceProviderName": "ProRide Services",
+      "servicePrice": "$15 per ride",
+      "serviceArea": "Regional"
+    },
+    {
+      "serviceId": 5,
+      "serviceImage": "https://i.ibb.co/kGt8WnH/images-2.jpg",
+      "serviceName": "EcoRide Express",
+      "serviceDescription": "Eco-friendly carpooling for environmentally conscious travelers. Reduce your carbon footprint.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider5.jpg",
+      "serviceProviderName": "GreenRide Corp.",
+      "servicePrice": "$9 per ride",
+      "serviceArea": "Citywide"
+    },
+    {
+      "serviceId": 6,
+      "serviceImage": "https://i.ibb.co/DGCwZkF/1688141363724.jpg",
+      "serviceName": "RideShare Plus",
+      "serviceDescription": "Premium ride-sharing experience with additional amenities and convenience features.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider6.jpg",
+      "serviceProviderName": "PlusRide Services",
+      "servicePrice": "$20 per ride",
+      "serviceArea": "Metropolitan Area"
+    },
+    {
+      "serviceId": 7,
+      "serviceImage": "https://i.ibb.co/HqNtqP8/pngtree-carpool-mobile-application-app-banner-image-1325940.jpg",
+      "serviceName": "Carpool Cruiser",
+      "serviceDescription": "Cruise to work with fellow commuters. Enjoy a comfortable and sociable journey.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider7.jpg",
+      "serviceProviderName": "CruiseRide Inc.",
+      "servicePrice": "$11 per ride",
+      "serviceArea": "Citywide"
+    },
+    {
+      "serviceId": 8,
+      "serviceImage": "https://i.ibb.co/KGN1kD1/stock-photo-ridesharing-and-carpooling-concept-in-the-city.jpg",
+      "serviceName": "RideShare Lite",
+      "serviceDescription": "Affordable ride-sharing with basic features. Ideal for budget-conscious travelers.",
+      "viewDetailButton": "View Details",
+      "serviceProviderImage": "provider8.jpg",
+      "serviceProviderName": "LiteRide Co.",
+      "servicePrice": "$7 per ride",
+      "serviceArea": "Citywide"
+    }
+  ]
+  
