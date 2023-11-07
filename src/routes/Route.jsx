@@ -11,6 +11,8 @@ import AddServices from "../pages/AddServices";
 import MyServices from "../pages/MyServices";
 import MyShedules from "../pages/MyShedules";
 import NotFound from "../pages/NotFound";
+import AllServices from "../pages/AllServices";
+import PrivateRoute from './../provider/PrivateRoute';
 
   const Route = createBrowserRouter([
     {
@@ -32,7 +34,7 @@ import NotFound from "../pages/NotFound";
         },
         {
           path: 'service',
-          element: <Service></Service>
+          element: <PrivateRoute><Service></Service></PrivateRoute>
         },
         {
           path:'dashboard',
@@ -49,6 +51,10 @@ import NotFound from "../pages/NotFound";
         {
           path: 'myshedules',
           element: <MyShedules></MyShedules>
+        },
+        {
+          path: 'allservices',
+          element: <AllServices></AllServices>
         },
        
       ],

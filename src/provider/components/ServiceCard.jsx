@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
+import { Link } from "react-router-dom";
+
 
 const ServiceCard = ({service}) => {
     const { _id, serviceImage, serviceName, serviceDescription,servicePrice, } = service;
@@ -22,10 +24,15 @@ const ServiceCard = ({service}) => {
             <img className="avatar btn-circle m-5" src={user.photoURL} alt="" />
             <p>{user.displayName}</p>
             </div>
+
+            <Link to={'/service'}>
+            
             <button className="btn btn-primary">View Detail</button>
+            </Link>
           </div>
         </div>
       </div>
+    
     </div>
   );
 };
