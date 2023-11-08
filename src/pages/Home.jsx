@@ -3,6 +3,8 @@ import ServiceCard from "../provider/components/ServiceCard";
 import { Link } from "react-router-dom";
 import ContactInfo from "../provider/components/ContactInfo";
 import Benifits from "../provider/components/Benifits";
+import test from "./test.json";
+import Lottie from "lottie-react";
 
 
 const Home = () => {
@@ -36,6 +38,16 @@ const Home = () => {
 
 
         <Benifits></Benifits>
+
+
+
+        <div className="text-center text-5xl font-extrabold py-5 mt-10">
+        Test our regular package service
+      </div>
+        <div >
+
+        <Lottie className="h-[80vh]" animationData={test} loop={true} />
+        </div>
 
 
 
