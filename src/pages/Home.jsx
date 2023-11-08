@@ -25,16 +25,18 @@ const Home = () => {
       .then((data) => setServices(data));
   }, []);
   return (
-    <div>
-    <div className="grid sticky left-0 top-[40vh] bg-blue-900 gap-5 w-10">
-        <ContactInfo></ContactInfo>
-    </div>
-
+    <div >
+  
    
 
-      <div style={bannerStyle} className="flex text-9xl text-g">
+      <div style={bannerStyle} className="flex text-9xl">
       
       </div>
+
+
+      <div className="grid sticky rounded-md p-2 left-0 top-[40vh] bg-blue-900 gap-1 w-10">
+        <ContactInfo></ContactInfo>
+    </div>
 
 
         <Benifits></Benifits>
