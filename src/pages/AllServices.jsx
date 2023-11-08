@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AllServiceCard from "../provider/components/AllServiceCard";
+import { Helmet } from "react-helmet";
 
 const AllServices = () => {
     const [datalength, setDatalength] = useState(6);
@@ -25,6 +26,9 @@ const AllServices = () => {
 
   return (
     <div>
+       <Helmet>
+      <title>Allservices</title>
+      </Helmet>
       <div className="flex justify-center items-center p-2">
         <div className="form-control ">
           <div className="input-group ">

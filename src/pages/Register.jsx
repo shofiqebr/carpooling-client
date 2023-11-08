@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import GoogleLogin from './../provider/components/GoogleLogin';
 import { AuthContext } from './../provider/AuthProvider';
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const {createUser} = useContext(AuthContext);
@@ -52,6 +53,9 @@ const Register = () => {
   };
   return (
     <div>
+       <Helmet>
+      <title>Register</title>
+      </Helmet>
 
 
       <div className="hero min-h-screen bg-base-200">

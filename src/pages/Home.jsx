@@ -5,6 +5,7 @@ import ContactInfo from "../provider/components/ContactInfo";
 import Benifits from "../provider/components/Benifits";
 import test from "./test.json";
 import Lottie from "lottie-react";
+import { Helmet } from "react-helmet";
 
 
 const Home = () => {
@@ -25,7 +26,11 @@ const Home = () => {
       .then((data) => setServices(data));
   }, []);
   return (
+    
     <div >
+      <Helmet>
+      <title>Home</title>
+      </Helmet>
   
    
 
@@ -34,7 +39,7 @@ const Home = () => {
       </div>
 
 
-      <div className="grid sticky rounded-md p-2 left-0 top-[40vh] bg-blue-900 gap-1 w-10">
+      <div className="grid sticky rounded-md p-2 left-0 top-[40vh] bg-blue-900 z-10 gap-1 w-10">
         <ContactInfo></ContactInfo>
     </div>
 

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const SingleService = () => {
   const { user } = useContext(AuthContext);
@@ -16,6 +17,9 @@ const SingleService = () => {
 
   return (
     <div>
+         <Helmet>
+      <title>Single services</title>
+      </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content  flex-col lg:flex-row-reverse">
           <div className="w-[300px]">

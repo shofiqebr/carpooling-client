@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import GoogleLogin from './../provider/components/GoogleLogin';
 import { AuthContext } from './../provider/AuthProvider';
+import { Helmet } from "react-helmet";
 
 
 const Login = () => {
@@ -37,6 +38,9 @@ const handleSubmit = event =>{
 }
     return (
         <div>
+           <Helmet>
+      <title>Login</title>
+      </Helmet>
              <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col  w-full lg:flex-row-reverse">
           
