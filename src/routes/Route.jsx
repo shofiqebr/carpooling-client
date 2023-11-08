@@ -13,6 +13,7 @@ import MyShedules from "../pages/MyShedules";
 import NotFound from "../pages/NotFound";
 import AllServices from "../pages/AllServices";
 import PrivateRoute from './../provider/PrivateRoute';
+import SingleService from './../pages/SingleService';
 
   const Route = createBrowserRouter([
     {
@@ -55,6 +56,11 @@ import PrivateRoute from './../provider/PrivateRoute';
         {
           path: 'allservices',
           element: <AllServices></AllServices>
+        },
+        {
+          path: 'singleservice/:id',
+          element: <SingleService></SingleService>,
+          loader: ({params}) =>fetch(`http://localhost:5000/services/${params.id}`)
         },
        
       ],

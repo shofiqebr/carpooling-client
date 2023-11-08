@@ -25,7 +25,7 @@ const ServiceCard = ({service}) => {
             <p>{user.displayName}</p>
             </div>
 
-            <Link to={'/service'}>
+            <Link to={`/singleservice/${_id}`}>
             
             <button className="btn btn-primary">View Detail</button>
             </Link>

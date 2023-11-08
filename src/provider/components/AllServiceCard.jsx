@@ -1,6 +1,7 @@
 
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider";
+import { Link } from "react-router-dom";
 
 const AllServiceCard = ({service}) => {
     const { _id, serviceImage, serviceName, serviceDescription,servicePrice,serviceArea } = service;
@@ -31,12 +32,16 @@ const AllServiceCard = ({service}) => {
           </div>
             <div>service area {serviceArea}</div>
             <div>service price {servicePrice}</div>
+
+            <Link to={`/singleservice/${_id}`}>
           <button className="btn btn-primary w-full">View detail</button>
+            
+            </Link>
         </div>
       </div>
     </div>
 {/* 
-    {service.length > 6 && (
+    {services.length > 6 && (
         <button className="btn btn-info m-3" onClick={toggleShowAll}>
           {showAll ? "Show Less" : "See All"}
         </button>
