@@ -17,7 +17,7 @@ const SingleService = () => {
   } = service;
   const handleAddService= (event)=>{
     event.preventDefault();
-    // console.log("Handle Add Service called");
+ ;
     const form = event.target;
 
     const serviceName  = form.serviceName.value;
@@ -26,13 +26,7 @@ const SingleService = () => {
     const date = form.date.value;
     const specialInstruction = form.specialInstruction.value;
     const servicePrice = form.servicePrice.value;
-    
-    // console.log("Service Name:", serviceName);
-    // console.log("Service Image:", serviceImage);
-    // console.log("Email:", email);
-    // console.log("Date:", date);
-    // console.log("Special Instruction:", specialInstruction);
-    // console.log("Service Price:", servicePrice);
+ 
 
     const service = { serviceName,serviceImage,email,date,specialInstruction,servicePrice}
 
@@ -98,41 +92,41 @@ const SingleService = () => {
               <div className="modal-box">
                 <form onSubmit={handleAddService} >
                 <input
-                  className="input input-bordered"
+                  className="input m-2 border-b-teal-400"
                   type="text"
                   name="serviceName"
                   value={serviceName}
                   readOnly
                 />
                 <input
-                  className="input input-bordered"
+                  className="input m-2 border-b-teal-400"
                   name="serviceImage"
                   type="text"
                   value={serviceImage}
                   readOnly
                 />
                 <input
-                  className="input input-bordered"
+                  className="input m-2 border-b-teal-400"
                   name="email"
                   type="text"
                   value={user.email}
                   readOnly
                 />
                 <input
-                  className="input input-bordered"
+                  className="input m-2 border-b-teal-400"
                   name="date"
                   type="date"
                   placeholder="service taking date"
                   
                 />
                 <input
-                  className="input input-bordered"
+                  className="input m-2 border-b-teal-400"
                   name="specialInstruction"
                   type="text"
                   placeholder="special instruction"
                 />
                 <input
-                  className="input input-bordered"
+                  className="input m-2 border-b-teal-400"
                   name="servicePrice"
                   type="text"
                   value={servicePrice}

@@ -15,6 +15,7 @@ import PrivateRoute from './../provider/PrivateRoute';
 import SingleService from './../pages/SingleService';
 import ManageService from "../pages/ManageService";
 import AddProduct from "../pages/AddProduct";
+import UpdateService from "../provider/components/UpdateService";
 
   const Route = createBrowserRouter([
     {
@@ -73,6 +74,11 @@ import AddProduct from "../pages/AddProduct";
 <ManageService></ManageService>
           </PrivateRoute>,
           loader: () =>fetch('https://carpooling-and-ride-sharing-service-server.vercel.app/services') 
+        },
+        {
+          path: 'updateService/:id',
+          element: <UpdateService></UpdateService>,
+          loader: ({params}) => fetch(`https://carpooling-and-ride-sharing-service-server.vercel.app/services/${params.id}`)
         }
        
       ],

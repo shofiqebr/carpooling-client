@@ -1,5 +1,6 @@
 // import { useContext } from 'react';
 
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 // import { AuthContext } from '../AuthProvider';
@@ -32,7 +33,7 @@ const ManageServiceCard = ({ service,services,setServices }) => {
                     if (data.deletedCount > 0) {
                         Swal.fire(
                             'Deleted!',
-                            'Your Coffee has been deleted.',
+                            'Your service has been deleted.',
                             'success'
                         )
                         const remaining = services.filter(cof => cof._id !== _id);
@@ -59,11 +60,22 @@ const ManageServiceCard = ({ service,services,setServices }) => {
         </div>
         <div className="card-body pt-20 pr-40">
         
-          <div className="card-actions justify-center">
-            <button className="btn w-36 btn-success">Edit</button>
-          </div>
+         
           <div className="card-actions justify-center">
             <button onClick={handleDelete} className="btn w-36 btn-success">Delete</button>
+          </div>
+          <div className="card-actions justify-center">
+           
+          <Link to={`/updateService/${_id}`}>
+  <button className="btn w-36 btn-success">Edit</button>
+</Link>
+{/* This should resolve the issue, and clicking the "Edit" button should now navigate to the correct update service page. */}
+
+
+
+
+
+
           </div>
          
         </div>
