@@ -36,7 +36,7 @@ const SingleService = () => {
 
     const service = { serviceName,serviceImage,email,date,specialInstruction,servicePrice}
 
-    console.log(service);
+    // console.log(service);
 
 
 
