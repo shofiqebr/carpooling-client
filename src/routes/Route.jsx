@@ -7,13 +7,14 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Service from "../pages/Service";
 import Dashboard from "../pages/Dashboard";
-import AddServices from "../pages/AddServices";
 import MyServices from "../pages/MyServices";
 import MyShedules from "../pages/MyShedules";
 import NotFound from "../pages/NotFound";
 import AllServices from "../pages/AllServices";
 import PrivateRoute from './../provider/PrivateRoute';
 import SingleService from './../pages/SingleService';
+import ManageService from "../pages/ManageService";
+import AddProduct from "../pages/AddProduct";
 
   const Route = createBrowserRouter([
     {
@@ -42,16 +43,20 @@ import SingleService from './../pages/SingleService';
           element: <Dashboard></Dashboard>
         },
         {
-          path: 'addservices',
-          element: <AddServices></AddServices>
+          path: 'addproduct',
+          element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
         },
         {
           path: 'myservices',
           element: <MyServices></MyServices>
         },
         {
+         
           path: 'myshedules',
-          element: <MyShedules></MyShedules>
+          element:  <PrivateRoute>
+            <MyShedules></MyShedules>
+          </PrivateRoute> 
+          
         },
         {
           path: 'allservices',
@@ -59,9 +64,15 @@ import SingleService from './../pages/SingleService';
         },
         {
           path: 'singleservice/:id',
-          element: <SingleService></SingleService>,
-          loader: ({params}) =>fetch(`http://localhost:5000/services/${params.id}`)
+          element:  <PrivateRoute><SingleService></SingleService></PrivateRoute>,
+          loader: ({params}) =>fetch(`https://carpooling-and-ride-sharing-service-server.vercel.app/services/${params.id}`)
         },
+        {
+          path:'manageservice',
+          element:<PrivateRoute>
+<ManageService></ManageService>
+          </PrivateRoute> 
+        }
        
       ],
     },

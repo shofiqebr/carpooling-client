@@ -2,18 +2,66 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 const SingleService = () => {
   const { user } = useContext(AuthContext);
   const service = useLoaderData();
+  
   const {
-    _id,
     serviceImage,
     serviceName,
     serviceDescription,
     servicePrice,
     serviceArea,
   } = service;
+  const handleAddService= (event)=>{
+    event.preventDefault();
+    // console.log("Handle Add Service called");
+    const form = event.target;
+
+    const serviceName  = form.serviceName.value;
+    const serviceImage = form.serviceImage.value;
+    const email = form.email.value;
+    const date = form.date.value;
+    const specialInstruction = form.specialInstruction.value;
+    const servicePrice = form.servicePrice.value;
+    
+    // console.log("Service Name:", serviceName);
+    // console.log("Service Image:", serviceImage);
+    // console.log("Email:", email);
+    // console.log("Date:", date);
+    // console.log("Special Instruction:", specialInstruction);
+    // console.log("Service Price:", servicePrice);
+
+    const service = { serviceName,serviceImage,email,date,specialInstruction,servicePrice}
+
+    console.log(service);
+
+
+
+  fetch('https://carpooling-and-ride-sharing-service-server.vercel.app/services', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(service)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.insertedId){
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Service Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                      })
+                }
+            })
+          };
+
+
 
   return (
     <div>
@@ -48,43 +96,51 @@ const SingleService = () => {
             </button>
             <dialog id="my_modal_1" className="modal">
               <div className="modal-box">
+                <form onSubmit={handleAddService} >
                 <input
                   className="input input-bordered"
                   type="text"
+                  name="serviceName"
                   value={serviceName}
                   readOnly
                 />
                 <input
                   className="input input-bordered"
+                  name="serviceImage"
                   type="text"
                   value={serviceImage}
                   readOnly
                 />
                 <input
                   className="input input-bordered"
+                  name="email"
                   type="text"
                   value={user.email}
                   readOnly
                 />
                 <input
                   className="input input-bordered"
-                  type="text"
+                  name="date"
+                  type="date"
                   placeholder="service taking date"
                   
                 />
                 <input
                   className="input input-bordered"
+                  name="specialInstruction"
                   type="text"
                   placeholder="special instruction"
                 />
                 <input
                   className="input input-bordered"
+                  name="servicePrice"
                   type="text"
                   value={servicePrice}
                   readOnly
                 />
-               <button className="btn">purchase now</button>
-               
+              
+               <button type="submit" className="btn">purchase now</button>
+               </form>
                 <div className="modal-action">
                   <form method="dialog">
                     {/* if there is a button in form, it will close the modal */}

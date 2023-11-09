@@ -7,7 +7,7 @@ const AllServices = () => {
   const [allservices, setAllServices] = useState([]);
 //   const [searchItem, setSearchItem]= useState("");
   useEffect(() => {
-    fetch("http://localhost:5000/allservices")
+    fetch("https://carpooling-and-ride-sharing-service-server.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setAllServices(data));
   }, []);

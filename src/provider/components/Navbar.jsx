@@ -59,6 +59,25 @@ const Navbar = () => {
         <Link to='/service'>Service</Link>
        
       </li>
+    
+      <li>
+        <Link to='/myshedule'>My Shedule</Link>
+       
+      </li>
+    
+      <li>
+        <Link to='/Manageservice'>Manage Service</Link>
+       
+      </li>
+    
+      <li>
+        <Link to='/addproduct'>Add Product</Link>
+       
+      </li>
+      <li>
+        <Link to='/allservices'>All Service</Link>
+       
+      </li>
       <li>
       <Link to='/register'>Register</Link>
       </li>
