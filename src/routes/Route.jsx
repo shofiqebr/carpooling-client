@@ -71,7 +71,8 @@ import AddProduct from "../pages/AddProduct";
           path:'manageservice',
           element:<PrivateRoute>
 <ManageService></ManageService>
-          </PrivateRoute> 
+          </PrivateRoute>,
+          loader: () =>fetch('https://carpooling-and-ride-sharing-service-server.vercel.app/services') 
         }
        
       ],
